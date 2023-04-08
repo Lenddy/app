@@ -21,6 +21,38 @@ import {
 	Tab,
 } from "@mui/material";
 
+// !!
+// !!
+// !!
+// !!
+// !!
+// !!
+// !!
+// !!
+// !!
+// !!
+// !! if your are copy this repo this does not exist yet i put it as a reminder that i should add it tomorrow
+import SwipeableViews from "react-swipeable-views-react-18-fix";
+
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+//!!
+
 const DashBoard = (props) => {
 	const [user, setUser] = useState({});
 	const [person, setPerson] = useState([]);
