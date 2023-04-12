@@ -9,8 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@date-io/date-fns": "^2.16.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -24,14 +22,16 @@
     "bootstrap": "^5.2.3",
     "date-fns": "^2.29.3",
     "moment": "^2.29.4",
-    "socket.io-client": "^4.6.1",
-    "web-vitals": "^2.1.4",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.0",
-    "react-to-print": "^2.14.12"
-
+    "react-swipeable-views-react-18-fix": "^0.14.1",
+    "react-to-print": "^2.14.12",
+    "socket.io-client": "^4.6.1",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

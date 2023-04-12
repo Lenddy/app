@@ -20,38 +20,7 @@ import {
 	Box,
 	Tab,
 } from "@mui/material";
-
-// !!
-// !!
-// !!
-// !!
-// !!
-// !!
-// !!
-// !!
-// !!
-// !!
-// !! if your are copy this repo this does not exist yet i put it as a reminder that i should add it tomorrow
 import SwipeableViews from "react-swipeable-views-react-18-fix";
-
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
-//!!
 
 const DashBoard = (props) => {
 	const [user, setUser] = useState({});
@@ -59,9 +28,13 @@ const DashBoard = (props) => {
 	const [tab, setTab] = useState("1");
 	const navigate = useNavigate();
 	const [currentTime, setCurrentTime] = useState(moment());
-
-	let interest = (15000 * (14 * 0.01)) / 13;
-	let total = 15000 / 13 + interest;
+	const [tabIndex, setTabIndex] = useState(0);
+	const tabChange = (e, newVal) => {
+		setTab(newVal);
+		setTabIndex(parseInt(newVal) - 1);
+	};
+	// let interest = (15000 * (14 * 0.01)) / 13;
+	// let total = 15000 / 13 + interest;
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -127,9 +100,9 @@ const DashBoard = (props) => {
 			});
 	}, []); //when i put the state person it keep re rendering
 
-	const tabChange = (e, newVal) => {
-		setTab(newVal);
-	};
+	// const tabChange = (e, newVal) => {
+	// 	setTab(newVal);
+	// };
 
 	return (
 		<div>
@@ -147,6 +120,7 @@ const DashBoard = (props) => {
 						arial-label="tabs example"
 						onChange={tabChange}
 						centered
+						swipeable={true}
 					>
 						<Tab
 							label="Clientes"
@@ -160,25 +134,21 @@ const DashBoard = (props) => {
 							icon={<RequestQuoteIcon />}
 							iconPosition="start"
 						/>
-						<Tab label="casi viene" value="3" disabled />
+						<Tab label="EN Progreso" value="3" disabled />
 					</TabList>
 				</Box>
-				<TabPanel value="1">
-					<AllCLients />
-				</TabPanel>
-				<TabPanel value="2">
-					<AllLoans />
-				</TabPanel>
-				<TabPanel value="3">casi viene</TabPanel>
+				<SwipeableViews index={tabIndex} onChangeIndex={setTabIndex}>
+					<TabPanel value="1">
+						<AllCLients />
+					</TabPanel>
+					<TabPanel value="2">
+						<AllLoans />
+					</TabPanel>
+					<TabPanel value="3">EN Progreso</TabPanel>
+				</SwipeableViews>
 			</TabContext>
 		</div>
 	);
-
-	// <SwipeableViews
-	//     axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-	//     index={value}
-	//     onChangeIndex={handleChangeIndex}
-	//   ></SwipeableViews>
 };
 
 export default DashBoard;
