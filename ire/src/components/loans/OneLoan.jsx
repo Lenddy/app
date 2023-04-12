@@ -3,8 +3,8 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import UndoPayment from "./UndoPayment";
 import Print from "../Print";
-import Bonus from "./Bonus";
-import Descuento from "./Descuento";
+// import Bonus from "./Bonus";
+// import Descuento from "./Descuento";
 
 const OneLoan = () => {
 	const { id } = useParams();

@@ -8,18 +8,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import RequestQuoteIcon from "@mui/icons-material/RequestQuote";
 import AllLoans from "./loans/AllLoans";
 import AllCLients from "./AllClients";
-import {
-	Typography,
-	Button,
-	TextField,
-	InputAdornment,
-	MenuItem,
-	Stack,
-	ToggleButton,
-	IconButton,
-	Box,
-	Tab,
-} from "@mui/material";
+import { Stack, Box, Tab } from "@mui/material";
 import SwipeableViews from "react-swipeable-views-react-18-fix";
 
 const DashBoard = (props) => {

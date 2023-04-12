@@ -4,7 +4,7 @@ import moment from "moment";
 import axios from "axios";
 import ConfirmDelete from "./ConfirmDelete";
 import { Modal, Button } from "react-bootstrap";
-import { Typography, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 
 const OneClient = (props) => {
 	const { id } = props;
